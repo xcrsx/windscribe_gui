@@ -11,9 +11,7 @@ class App(MainWindow):
 if __name__ == "__main__":
     app = QApplication()
     window = App()
-    window.setFixedSize(400, 600)
+    window.setFixedSize(400, 450)
     window.show()
 
     sys.exit(app.exec_())
-    com = os.popen('windscribe account').read()
-    print(com)
