@@ -55,6 +55,7 @@ class MainWindow(Ui_MainWindow, QtWidgets.QMainWindow):
         # self.actionLogout.triggered.connect(self.log_out)
         self.log_window.accepted.connect(self.log_in)
         self.logoutButton.clicked.connect(self.log_out)
+        self.mainButton.clicked.disconnect()
        
     def get_account_info(self) -> None:
 
@@ -65,7 +66,8 @@ class MainWindow(Ui_MainWindow, QtWidgets.QMainWindow):
         if status == 0:
             self.logoutButton.setVisible(False)
             self.mainButton.setText("Log In")
-            self.actionShowLoginDialog.triggered.connect(self.show_login_dialog)
+            # self.actionShowLoginDialog.triggered.connect(self.show_login_dialog)
+            self.mainButton.clicked.connect(self.show_login_dialog)
         elif status == 1:
             self.logoutButton.setVisible(True)
             display_info = account.read().split(b"\r\n")
@@ -96,7 +98,7 @@ class MainWindow(Ui_MainWindow, QtWidgets.QMainWindow):
         command.expect("Windscribe Password: ")
         command.sendline(self.log_window.passwordLine.text())
         command.expect("Logged In")
-        self.mainButton.disconnect(self.actionShowLoginDialog)
+        self.mainButton.clicked.disconnect(self.show_login_dialog)
         self.get_account_info()
         self.logoutButton.setVisible(True)
 
@@ -134,4 +136,6 @@ class MainWindow(Ui_MainWindow, QtWidgets.QMainWindow):
         self.disconnect_server()
         command = pexpect.spawn("windscribe logout")
         command.expect("Logged Out, Disconnecting*")
+        self.comboBox.setVisible(False)
+        self.mainButton.clicked.disconnect()
         self.get_account_info()
