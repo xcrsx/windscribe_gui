@@ -21,6 +21,13 @@ class Ui_Dialog(object):
             Dialog.setObjectName(u"Dialog")
         Dialog.setWindowModality(Qt.WindowModal)
         Dialog.resize(385, 203)
+        Dialog.setStyleSheet(u"QLineEdit {\n"
+"    border: 2px solid gray;\n"
+"    border-radius: 10px;\n"
+"    padding: 0 8px;\n"
+"    background: azure;\n"
+"    selection-background-color: darkgray;\n"
+"}")
         self.cancelButton = QPushButton(Dialog)
         self.cancelButton.setObjectName(u"cancelButton")
         self.cancelButton.setGeometry(QRect(180, 150, 89, 25))
@@ -41,6 +48,7 @@ class Ui_Dialog(object):
         self.loginLine = QLineEdit(Dialog)
         self.loginLine.setObjectName(u"loginLine")
         self.loginLine.setGeometry(QRect(110, 60, 261, 30))
+        self.loginLine.setStyleSheet(u"")
         self.passwordLine = QLineEdit(Dialog)
         self.passwordLine.setObjectName(u"passwordLine")
         self.passwordLine.setGeometry(QRect(110, 100, 261, 30))

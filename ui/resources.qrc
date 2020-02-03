@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/images">
+        <file>resources/icons/virtual-private-network.png</file>
+        <file>resources/icons/vpn.svg</file>
+        <file>resources/icons/VPNGIF.gif</file>
+    </qresource>
+</RCC>

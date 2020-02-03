@@ -20,6 +20,9 @@ class Ui_MainWindow(object):
         if MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
         MainWindow.resize(400, 450)
+        icon = QIcon()
+        icon.addFile(u":/images/resources/icons/VPNGIF.gif", QSize(), QIcon.Normal, QIcon.Off)
+        MainWindow.setWindowIcon(icon)
         self.actionAccountStatus = QAction(MainWindow)
         self.actionAccountStatus.setObjectName(u"actionAccountStatus")
         self.actionShowLoginDialog = QAction(MainWindow)

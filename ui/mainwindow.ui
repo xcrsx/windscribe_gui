@@ -13,6 +13,10 @@
   <property name="windowTitle">
    <string>Windscribe VPN</string>
   </property>
+  <property name="windowIcon">
+   <iconset resource="resources.qrc">
+    <normaloff>:/images/resources/icons/VPNGIF.gif</normaloff>:/images/resources/icons/VPNGIF.gif</iconset>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QLabel" name="informLabel">
     <property name="geometry">
@@ -135,7 +139,9 @@
    </property>
   </action>
  </widget>
- <resources/>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
  <connections>
   <connection>
    <sender>accountStatusButton</sender>

@@ -16,6 +16,15 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">QLineEdit {
+    border: 2px solid gray;
+    border-radius: 10px;
+    padding: 0 8px;
+    background: azure;
+    selection-background-color: darkgray;
+}</string>
+  </property>
   <widget class="QPushButton" name="cancelButton">
    <property name="geometry">
     <rect>
@@ -89,6 +98,9 @@
      <width>261</width>
      <height>30</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
    </property>
   </widget>
   <widget class="QLineEdit" name="passwordLine">

@@ -1,5 +1,4 @@
-import sys
-import os
+
 from PySide2.QtWidgets import QApplication
 from windscribe_gui.ui import MainWindow
 
