@@ -20,7 +20,7 @@ class Ui_Dialog(object):
         if Dialog.objectName():
             Dialog.setObjectName(u"Dialog")
         Dialog.setWindowModality(Qt.WindowModal)
-        Dialog.resize(385, 203)
+        Dialog.resize(382, 219)
         Dialog.setStyleSheet(u"QLineEdit {\n"
 "    border: 2px solid gray;\n"
 "    border-radius: 10px;\n"
@@ -59,6 +59,10 @@ class Ui_Dialog(object):
         font1.setPointSize(15)
         self.dialogText.setFont(font1)
         self.dialogText.setAlignment(Qt.AlignCenter)
+        self.sourceLabel = QLabel(Dialog)
+        self.sourceLabel.setObjectName(u"sourceLabel")
+        self.sourceLabel.setGeometry(QRect(0, 190, 381, 31))
+        self.sourceLabel.setAlignment(Qt.AlignCenter)
 
         self.retranslateUi(Dialog)
         self.logInButton.clicked.connect(Dialog.accept)
@@ -74,5 +78,6 @@ class Ui_Dialog(object):
         self.loginField.setText(QCoreApplication.translate("Dialog", u"Login:", None))
         self.passwordField.setText(QCoreApplication.translate("Dialog", u"Password:", None))
         self.dialogText.setText(QCoreApplication.translate("Dialog", u"Login in your account", None))
+        self.sourceLabel.setText("")
     # retranslateUi
 
