@@ -23,45 +23,89 @@ class Ui_Dialog(object):
         Dialog.resize(382, 219)
         Dialog.setStyleSheet(u"QLineEdit {\n"
 "    border: 2px solid gray;\n"
-"    border-radius: 10px;\n"
 "    padding: 0 8px;\n"
-"    background: azure;\n"
 "    selection-background-color: darkgray;\n"
+"	background-color: darkgray;\n"
 "}")
         self.cancelButton = QPushButton(Dialog)
         self.cancelButton.setObjectName(u"cancelButton")
         self.cancelButton.setGeometry(QRect(180, 150, 89, 25))
+        font = QFont()
+        font.setFamily(u"Perfect DOS VGA 437")
+        font.setBold(True)
+        font.setWeight(75);
+        self.cancelButton.setFont(font)
+        self.cancelButton.setStyleSheet(u"QPushButton{\n"
+"background-color: #bbbbbb;\n"
+"border: 1px;\n"
+"}\n"
+"QPushButton:hover {\n"
+"     background-color: #666666;\n"
+" }\n"
+"QPushButton:pressed {\n"
+"border-style:solid;\n"
+"border-width:3px;\n"
+"}")
         self.cancelButton.setAutoDefault(False)
+        self.cancelButton.setFlat(True)
         self.logInButton = QPushButton(Dialog)
         self.logInButton.setObjectName(u"logInButton")
         self.logInButton.setGeometry(QRect(280, 150, 89, 25))
+        self.logInButton.setFont(font)
+        self.logInButton.setStyleSheet(u"QPushButton{\n"
+"background-color: #bbbbbb;\n"
+"border: 1px;\n"
+"}\n"
+"QPushButton:hover {\n"
+"     background-color: #666666;\n"
+" }\n"
+"QPushButton:pressed {\n"
+"border-style:solid;\n"
+"border-width:3px;\n"
+"}")
+        self.logInButton.setFlat(True)
         self.loginField = QLabel(Dialog)
         self.loginField.setObjectName(u"loginField")
         self.loginField.setGeometry(QRect(20, 60, 81, 31))
-        font = QFont()
-        font.setPointSize(13)
-        self.loginField.setFont(font)
+        font1 = QFont()
+        font1.setFamily(u"Perfect DOS VGA 437")
+        font1.setPointSize(13)
+        font1.setBold(True)
+        font1.setWeight(75);
+        self.loginField.setFont(font1)
+        self.loginField.setStyleSheet(u"color: #defe54;")
         self.passwordField = QLabel(Dialog)
         self.passwordField.setObjectName(u"passwordField")
         self.passwordField.setGeometry(QRect(20, 100, 81, 31))
-        self.passwordField.setFont(font)
+        self.passwordField.setFont(font1)
+        self.passwordField.setStyleSheet(u"color: #defe54;")
         self.loginLine = QLineEdit(Dialog)
         self.loginLine.setObjectName(u"loginLine")
         self.loginLine.setGeometry(QRect(110, 60, 261, 30))
+        self.loginLine.setFont(font)
         self.loginLine.setStyleSheet(u"")
         self.passwordLine = QLineEdit(Dialog)
         self.passwordLine.setObjectName(u"passwordLine")
         self.passwordLine.setGeometry(QRect(110, 100, 261, 30))
+        self.passwordLine.setFont(font)
         self.dialogText = QLabel(Dialog)
         self.dialogText.setObjectName(u"dialogText")
         self.dialogText.setGeometry(QRect(0, 6, 381, 41))
-        font1 = QFont()
-        font1.setPointSize(15)
-        self.dialogText.setFont(font1)
+        font2 = QFont()
+        font2.setFamily(u"Perfect DOS VGA 437")
+        font2.setPointSize(15)
+        font2.setBold(True)
+        font2.setWeight(75);
+        self.dialogText.setFont(font2)
+        self.dialogText.setStyleSheet(u"color: #defe54;")
         self.dialogText.setAlignment(Qt.AlignCenter)
         self.sourceLabel = QLabel(Dialog)
         self.sourceLabel.setObjectName(u"sourceLabel")
-        self.sourceLabel.setGeometry(QRect(0, 190, 381, 31))
+        self.sourceLabel.setGeometry(QRect(0, 190, 391, 31))
+        self.sourceLabel.setFont(font)
+        self.sourceLabel.setStyleSheet(u"color: #defe54;\n"
+"background-color: #bbbbbb;\n"
+"border: 1px;")
         self.sourceLabel.setAlignment(Qt.AlignCenter)
 
         self.retranslateUi(Dialog)

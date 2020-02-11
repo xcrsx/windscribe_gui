@@ -10,12 +10,24 @@
     <height>450</height>
    </rect>
   </property>
+  <property name="font">
+   <font>
+    <family>Perfect DOS VGA 437</family>
+    <weight>75</weight>
+    <bold>true</bold>
+   </font>
+  </property>
   <property name="windowTitle">
    <string>Windscribe VPN</string>
   </property>
   <property name="windowIcon">
-   <iconset resource="resources.qrc">
-    <normaloff>:/images/resources/icons/VPNGIF.gif</normaloff>:/images/resources/icons/VPNGIF.gif</iconset>
+   <iconset resource="resource.qrc">
+    <normaloff>:/images/resources/icons/virtual-private-network.png</normaloff>:/images/resources/icons/virtual-private-network.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+background-color: #000084;
+</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QLabel" name="informLabel">
@@ -27,8 +39,16 @@
       <height>87</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <family>Perfect DOS VGA 437</family>
+      <pointsize>15</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
     <property name="styleSheet">
-     <string notr="true"/>
+     <string notr="true">color: #defe54;</string>
     </property>
     <property name="frameShape">
      <enum>QFrame::StyledPanel</enum>
@@ -52,8 +72,122 @@
       <height>31</height>
      </rect>
     </property>
+    <property name="palette">
+     <palette>
+      <active>
+       <colorrole role="Button">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>187</red>
+          <green>187</green>
+          <blue>187</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Base">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>187</red>
+          <green>187</green>
+          <blue>187</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Window">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>187</red>
+          <green>187</green>
+          <blue>187</blue>
+         </color>
+        </brush>
+       </colorrole>
+      </active>
+      <inactive>
+       <colorrole role="Button">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>187</red>
+          <green>187</green>
+          <blue>187</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Base">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>187</red>
+          <green>187</green>
+          <blue>187</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Window">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>187</red>
+          <green>187</green>
+          <blue>187</blue>
+         </color>
+        </brush>
+       </colorrole>
+      </inactive>
+      <disabled>
+       <colorrole role="Button">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>187</red>
+          <green>187</green>
+          <blue>187</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Base">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>187</red>
+          <green>187</green>
+          <blue>187</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Window">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>187</red>
+          <green>187</green>
+          <blue>187</blue>
+         </color>
+        </brush>
+       </colorrole>
+      </disabled>
+     </palette>
+    </property>
+    <property name="font">
+     <font>
+      <family>Perfect DOS VGA 437</family>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+background-color: #bbbbbb;
+border: 1px;
+}
+QPushButton:hover {
+     background-color: #666666;
+ }
+QPushButton:pressed {
+border-style:solid;
+border-width:3px;
+}</string>
+    </property>
     <property name="text">
      <string>Check account status</string>
+    </property>
+    <property name="flat">
+     <bool>true</bool>
     </property>
    </widget>
    <widget class="QPushButton" name="mainButton">
@@ -65,24 +199,67 @@
       <height>50</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <family>Perfect DOS VGA 437</family>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
     <property name="autoFillBackground">
-     <bool>true</bool>
+     <bool>false</bool>
     </property>
     <property name="styleSheet">
-     <string notr="true"/>
+     <string notr="true">QPushButton{
+background-color: #bbbbbb;
+border: 1px;
+}
+QPushButton:hover {
+     background-color: #666666;
+ }
+QPushButton:pressed {
+border-style:solid;
+border-width:3px;
+}</string>
     </property>
     <property name="text">
      <string/>
+    </property>
+    <property name="flat">
+     <bool>true</bool>
     </property>
    </widget>
    <widget class="QComboBox" name="comboBox">
     <property name="geometry">
      <rect>
-      <x>270</x>
+      <x>254</x>
       <y>200</y>
-      <width>120</width>
+      <width>141</width>
       <height>41</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Perfect DOS VGA 437</family>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QComboBox {
+background-color: #bbbbbb;
+border: 1px
+}
+QComboBox QAbstractItemView {
+    background-color: #00aaaa;
+    color: white;
+	border: 1px;
+    selection-background-color: rgb(88, 88, 88);
+    selection-color: rgb(200, 200, 200);
+}
+QComboBox:hover {
+     background-color: #666666;
+ }</string>
     </property>
     <property name="currentText">
      <string/>
@@ -97,8 +274,31 @@
       <height>31</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <family>Perfect DOS VGA 437</family>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+background-color: #bbbbbb;
+border: 1px;
+}
+QPushButton:hover {
+     background-color: #666666;
+ }
+QPushButton:pressed {
+border-style:solid;
+border-width:3px;
+}</string>
+    </property>
     <property name="text">
      <string>Log out</string>
+    </property>
+    <property name="flat">
+     <bool>true</bool>
     </property>
    </widget>
   </widget>
@@ -112,7 +312,18 @@
     </rect>
    </property>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QStatusBar" name="statusbar">
+   <property name="font">
+    <font>
+     <family>Perfect DOS VGA 437</family>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: #defe54;</string>
+   </property>
+  </widget>
   <action name="actionAccountStatus">
    <property name="text">
     <string>checkStat</string>
@@ -140,7 +351,7 @@
   </action>
  </widget>
  <resources>
-  <include location="resources.qrc"/>
+  <include location="resource.qrc"/>
  </resources>
  <connections>
   <connection>

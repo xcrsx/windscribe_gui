@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/images">
+        <file>resources/icons/virtual-private-network.png</file>
+        <file>resources/icons/1.gif</file>
+        <file>resources/icons/giphy.gif</file>
+        <file>resources/icons/hourglass.gif</file>
+    </qresource>
+</RCC>

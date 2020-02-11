@@ -16,4 +16,3 @@ class Login(Ui_Dialog, QtWidgets.QDialog):
         self.sourceLabel.setTextFormat(QtCore.Qt.RichText)
         self.sourceLabel.setTextInteractionFlags(QtCore.Qt.TextBrowserInteraction)
         self.sourceLabel.setOpenExternalLinks(True)
-        

@@ -19,10 +19,9 @@
   <property name="styleSheet">
    <string notr="true">QLineEdit {
     border: 2px solid gray;
-    border-radius: 10px;
     padding: 0 8px;
-    background: azure;
     selection-background-color: darkgray;
+	background-color: darkgray;
 }</string>
   </property>
   <widget class="QPushButton" name="cancelButton">
@@ -34,11 +33,34 @@
      <height>25</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Perfect DOS VGA 437</family>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+background-color: #bbbbbb;
+border: 1px;
+}
+QPushButton:hover {
+     background-color: #666666;
+ }
+QPushButton:pressed {
+border-style:solid;
+border-width:3px;
+}</string>
+   </property>
    <property name="text">
     <string>Cancel</string>
    </property>
    <property name="autoDefault">
     <bool>false</bool>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
    </property>
   </widget>
   <widget class="QPushButton" name="logInButton">
@@ -50,8 +72,31 @@
      <height>25</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Perfect DOS VGA 437</family>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+background-color: #bbbbbb;
+border: 1px;
+}
+QPushButton:hover {
+     background-color: #666666;
+ }
+QPushButton:pressed {
+border-style:solid;
+border-width:3px;
+}</string>
+   </property>
    <property name="text">
     <string>Log In</string>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
    </property>
   </widget>
   <widget class="QLabel" name="loginField">
@@ -65,8 +110,14 @@
    </property>
    <property name="font">
     <font>
+     <family>Perfect DOS VGA 437</family>
      <pointsize>13</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
     </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: #defe54;</string>
    </property>
    <property name="text">
     <string>Login:</string>
@@ -83,8 +134,14 @@
    </property>
    <property name="font">
     <font>
+     <family>Perfect DOS VGA 437</family>
      <pointsize>13</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
     </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: #defe54;</string>
    </property>
    <property name="text">
     <string>Password:</string>
@@ -99,6 +156,13 @@
      <height>30</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Perfect DOS VGA 437</family>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
    <property name="styleSheet">
     <string notr="true"/>
    </property>
@@ -112,6 +176,13 @@
      <height>30</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Perfect DOS VGA 437</family>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
   </widget>
   <widget class="QLabel" name="dialogText">
    <property name="geometry">
@@ -124,8 +195,14 @@
    </property>
    <property name="font">
     <font>
+     <family>Perfect DOS VGA 437</family>
      <pointsize>15</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
     </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: #defe54;</string>
    </property>
    <property name="text">
     <string>Login in your account</string>
@@ -139,9 +216,21 @@
     <rect>
      <x>0</x>
      <y>190</y>
-     <width>381</width>
+     <width>391</width>
      <height>31</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Perfect DOS VGA 437</family>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: #defe54;
+background-color: #bbbbbb;
+border: 1px;</string>
    </property>
    <property name="text">
     <string/>

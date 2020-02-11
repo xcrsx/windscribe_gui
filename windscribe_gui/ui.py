@@ -51,8 +51,15 @@ class MainWindow(Ui_MainWindow, QtWidgets.QMainWindow):
         self.informLabel.setText("Welcome to Windscribe GUI") # displays info
         self.mainButton.setVisible(False) # changes name and connects to different slots
         self.logoutButton.setVisible(False)
+
         self.comboBox.setVisible(False)
         self.comboBox.addItems(SERVER_LIST)
+
+        self.apply_effect(self.mainButton)
+        self.apply_effect(self.accountStatusButton)
+        self.apply_effect(self.logoutButton)
+        self.apply_effect(self.comboBox)
+
                
 
         self.status = None # info which displays in statusbar
@@ -67,6 +74,7 @@ class MainWindow(Ui_MainWindow, QtWidgets.QMainWindow):
     def get_account_info(self) -> None:
 
         try:
+            self.show_gif()
             self.mainButton.setVisible(True)
             account = pexpect.spawn("windscribe account")
             status = account.read()
@@ -90,6 +98,7 @@ class MainWindow(Ui_MainWindow, QtWidgets.QMainWindow):
                 else:
                     self.mainButton.setText("Disconnect")
                     self.mainButton.clicked.connect(self.disconnect_server)
+                    self.comboBox.setVisible(False)
                 self.statusbar.showMessage(self.status)
         except Exception as error:
             logger.error(error)
@@ -100,6 +109,8 @@ class MainWindow(Ui_MainWindow, QtWidgets.QMainWindow):
         self.log_window.setParent(self)
         self.log_window.setWindowModality(QtCore.Qt.ApplicationModal)
         self.log_window.setWindowFlags(QtCore.Qt.Window)
+        self.apply_effect(self.log_window.logInButton)
+        self.apply_effect(self.log_window.cancelButton)
         self.log_window.exec_()    
 
     def log_in(self) -> None:
@@ -155,8 +166,6 @@ class MainWindow(Ui_MainWindow, QtWidgets.QMainWindow):
             logger.error(error)
             self.error.showMessage(common_error)
 
-
-
     def connect_to_server(self) -> None:
 
         try:
@@ -200,3 +209,15 @@ class MainWindow(Ui_MainWindow, QtWidgets.QMainWindow):
         except Exception as error:
             logger.error(error)
             self.error.showMessage(common_error)
+
+    def apply_effect(self, buttn: QtWidgets.QPushButton):
+        effect = QtWidgets.QGraphicsDropShadowEffect(self)
+        color = QtGui.QColor(0, 0, 0)
+        effect.setColor(color)
+        effect.setOffset(7, 7)
+        buttn.setGraphicsEffect(effect)
+
+    def show_gif(self):
+        movie = QtGui.QMovie(u":/images/resources/icons/hourglass.gif")
+        self.informLabel.setMovie(movie)
+        movie.start()
