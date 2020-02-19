@@ -1,0 +1,15 @@
+altgraph==0.17
+astroid==2.3.3
+isort==4.3.21
+lazy-object-proxy==1.4.3
+mccabe==0.6.1
+pexpect==4.8.0
+pkg-resources==0.0.0
+ptyprocess==0.6.0
+PyInstaller==3.6
+pylint==2.4.4
+PySide2==5.14.0
+shiboken2==5.14.0
+six==1.14.0
+typed-ast==1.4.1
+wrapt==1.11.2

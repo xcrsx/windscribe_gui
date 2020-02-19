@@ -204,7 +204,6 @@ Thumbs.db
 *.dll
 *.exe
 
-*.txt
 *.user
 *.cpp
 *.h
