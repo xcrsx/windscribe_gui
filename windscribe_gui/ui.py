@@ -83,7 +83,7 @@ class MainWindow(Ui_MainWindow, QtWidgets.QMainWindow):
                 self.logoutButton.setVisible(False)
                 self.mainButton.setText("Log In")
                 self.mainButton.clicked.connect(self.show_login_dialog)
-                self.statusbar.showMessage("")
+                self.statusbar.showMessage("NOT LOGGED IN")
             else:
                 self.logoutButton.setVisible(True)
                 status = status.split(b"\r\n")
@@ -95,10 +95,14 @@ class MainWindow(Ui_MainWindow, QtWidgets.QMainWindow):
                     self.mainButton.setText("Connect")
                     self.comboBox.setVisible(True)
                     self.mainButton.clicked.connect(self.connect_to_server)
-                else:
+                elif "CONNECTED" in self.status:
                     self.mainButton.setText("Disconnect")
                     self.mainButton.clicked.connect(self.disconnect_server)
                     self.comboBox.setVisible(False)
+                else:
+                    self.logoutButton.setVisible(False)
+                    self.mainButton.setVisible(False)
+                    self.error.showMessage("".join(status))
                 self.statusbar.showMessage(self.status)
         except Exception as error:
             logger.error(error)
@@ -156,7 +160,8 @@ class MainWindow(Ui_MainWindow, QtWidgets.QMainWindow):
             if "Service communication error" in message_to_show:
                 self.error.setWindowTitle("Service communication error")
                 self.error.showMessage("Service communication error")
-                return
+                # необходимо либо прервать подключение, либо повторно вызвать статус.
+                return self.get_status()
             else:
                 return message_to_show[2]
         except IndexError as error:
