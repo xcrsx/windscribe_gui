@@ -10,7 +10,7 @@
 
 ## 🧐 About <a name = "about"></a>
 
-The main idea of this project is to continue learning the Qt framework and the Pyside2 module.
+The main idea of this project is to learn the Qt framework and the Pyside2 module.
 Since there is no official desktop app for Windscribe VPN for GNU/Linux OS, I decided to write my own. <strike>With blackjack. And hookers.</strike>
 <p>
 Everyone is welcome to use, test and leave feedback. :) If you'd like to contribute feel free to pull requests.
