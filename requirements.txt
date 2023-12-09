@@ -6,7 +6,7 @@ mccabe==0.6.1
 pexpect==4.8.0
 pkg-resources==0.0.0
 ptyprocess==0.6.0
-PyInstaller==3.6
+PyInstaller==5.13.1
 pylint==2.4.4
 PySide2==5.14.0
 shiboken2==5.14.0
